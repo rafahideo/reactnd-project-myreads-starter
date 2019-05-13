@@ -29,7 +29,7 @@ class Book extends Component {
     render(){
         const book = this.props.book;
         return(
-            <li key={book.id}>
+            <li key={this.key}>
                 <div className="book">
                 <div className="book-top">
                     <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: this.validateImage(book) }}></div>

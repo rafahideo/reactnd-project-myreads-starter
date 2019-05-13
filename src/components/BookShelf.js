@@ -19,6 +19,7 @@ class BookShelf extends Component {
                 <ol className="books-grid">
                     {booksList.filter(s => s.shelf === shelfType).map((book) => (
                       <Book 
+                      key = {book.id}
                       changeShelf = {this.props.changeShelf}
                       booksList = {booksList}
                       book = {book}/>

@@ -22,11 +22,6 @@ class SearchBooks extends Component{
       }
     }
 
-    handleSelectChange = (book, e) => {
-      const {changeShelf} = this.props;
-      changeShelf(book, e.target.value);
-    }
-
     render(){
         return (
           <div className="search-books">
@@ -42,8 +37,9 @@ class SearchBooks extends Component{
             <ol className="books-grid">
                 {this.state.newBooksList.length > 0 && this.state.newBooksList.map((book) => (
                     <Book 
+                    key ={book.id}
                     changeShelf = {this.props.changeShelf}
-                    booksList = {this.state.newBooksList}
+                    booksList = {this.props.booksList}
                     book = {book}/>
                 ))
                 }
